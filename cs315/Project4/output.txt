@@ -1,0 +1,44 @@
+Input-files processed
+testA.html
+testB.html
+testC.html
+testD.html
+
+Cross-reference report for testA.html
+
+testA.html refers to:
+   testB.html
+   testC.html
+   testD.html
+
+testA.html does not refer to any other file.
+
+
+Cross-reference report for testB.html
+
+testB.html refers to:
+   testC.html
+   testD.html
+
+testB.html is referred to by:
+   testA.html
+
+
+Cross-reference report for testC.html
+
+testC.html refers to:
+   testD.html
+
+testC.html is referred to by:
+   testA.html
+   testB.html
+
+
+Cross-reference report for testD.html
+
+testD.html does not refer to any file.
+
+testD.html is referred to by:
+   testA.html
+   testB.html
+   testC.html
