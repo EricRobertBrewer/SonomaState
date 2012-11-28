@@ -1,0 +1,114 @@
+/*
+README
+Eric Brewer
+11/5/10
+Kooshesh
+CS450 - Operating Systems
+Chat Program: README - 
+*/
+
+//    I archived this file using the command                     // 
+//    $ tar cfvz brewerP1.tgz Project1/                          //
+
+Type 'make' at the Linux prompt to compile the project.
+'make clean' will delete the files created by make.
+
+To begin, one must start the server application, "server.x".
+A user first runs "cProcess.x". This is the Command window.
+Next, that user opens the Reader and Writer processes, "rProcess.x"
+  and "wProcess.x".
+Once all three processes have been opened after the server has been
+  launched, the user can type messages into the Writer process
+  and all users on the system who are subscribed to this user's 
+  default ChatRoom will hear the message.
+The three user processes need an IP address, a port number, and a
+  desired username to run properly. The username cannot contain
+  spaces.
+
+EXAMPLE (all in separate shell sessions)
+$ ./server.x
+...
+$ ./cProcess.x 127.0.0.1 6310 ericb
+...
+$ ./rProcess.x 127.0.0.1 6311 ericb
+...
+$ ./wProcess.x 127.0.0.1 6312 ericb
+
+-------------------------------------------------------------------
+                         ### Commands ###
+
+"bye."                 - Simply unsubscribes you from all ChatRooms
+                           and deletes you from the master list of
+                           clients.
+
+"crea <ChatRoom name>" - Creates a new ChatRoom with given name.
+
+"subs <ChatRoom name>" - Subscribe to an existing ChatRoom; you can
+                           hear messages that are sent to that
+                           ChatRoom.
+
+"unsu <ChatRoom name>" - Unsubscribes you from a given ChatRoom; 
+                           you can no longer hear messages from
+                           that ChatRoom. If unsubscibing a room
+                           causes that room to be empty, that room
+                           is deleted unless it's the Default
+                           ChatRoom.
+
+"shut"                 - An accepted command that does nothing.
+                           Should shut the server down.
+
+"myde"                 - Displays your default ChatRoom.
+
+"defa <ChatRoom name>" - Changes your default ChatRoom.
+
+"lscr"                 - Displays the list of all existing 
+                           ChatRooms.
+
+"lssu"                 - Displays the list of ChatRooms to which 
+                           you are subscribed.
+-------------------------------------------------------------------
+
+Well, it works to an extent; it reads and writes without a 
+  hitch. I'll start with the flaws.
+
+FLAWS:
+- Cannot gracefully close any application - I always used C-c.
+- The "shut" command is not implemented.
+- The "bye." command does not close a user's applications.
+- The "unsu" command occasionally unsubscribed other users from the
+    specified ChatRoom instead of the caller. This may be rooted
+    in ChatRoom::removeClient() - I may have misunderstood the
+    vector's functions.
+- The user has a bit more work than he/she would like in guessing
+    at an available port number and reentering his/her IP address
+    and username for each process.
+- The reader process initially catches a bit of garbage data and
+    prints it.
+- Additionally, the client's command thread returns a "Command
+    rejected" message after it is started.
+- Much of the code is computationally inefficient; such as 
+    ChatRoomCollection::lscr() or writerThread()'s fundamental
+    loop.
+- CPU-intensive hard-coded spin-locks were used to wait until all 
+    the client's processeshave been opened instead of
+    pthread_cond_wait() in server.cpp's threads - 
+    while( !client->isActive() );
+- 
+
+Notes:
+I didn't do extensive testing to see what would happen if the 
+  BoundedBuffer filled to capacity and messages were waiting to be 
+  inserted. I always used limit = 40.
+
+Occasionally, I found that if processes were closed in an
+  unfortunate order, the server would shut down. It happened too
+  infrequently for me to discover the order.
+
+I only used two mutexes outside of BoundedBuffer, they are both 
+  in server.cpp - 
+  The first is surrounding the accept function in main() to ensure 
+    the correct value of the socket descriptor was passed to the
+    created thread.
+  The second is in commandThread() surrounding the decoding of the
+    command. This is there so that the internal data structures are
+    kept consistent when the message is written back to the client.

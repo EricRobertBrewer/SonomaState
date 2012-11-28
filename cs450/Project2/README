@@ -1,0 +1,26 @@
+/*
+README
+Eric Brewer
+12/6/10
+Kooshesh
+CS450 - Operating Systems
+README - 
+*/
+
+Notes:
+- Assumes perfect input from the user. --No error recovery.
+- Command lines must end on a non-space character. 
+- No redirect functionality whatsoever.
+
+- I had an ongoing problem regarding calling execvp.
+  I first counted the number of arguments in a given single command; 
+  not a piped command. I copied the command strings to variables of type 
+  char*. I then set the following char* in the array of char*s to NULL.
+  The next command, if it was longer than the previous command, will 
+  segmentation fault when strcpy() is called on line 108 because it is 
+  trying to access the elements specified by a NULL pointer. The 
+  mirrored structure, char*** null_backup, tries to remedy this on line
+  183, butdoesn't work correctly. --Only the first command of the session 
+  is guaranteed to work.
+
+- Other than this, piping works fine - without redirection.
