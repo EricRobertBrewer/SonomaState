@@ -1,0 +1,360 @@
+#ifndef ORDEREDSET_TMP
+#define ORDEREDSET_TMP
+
+#include<iostream>
+using namespace std;
+
+template<class ST> class OrderedSet;
+
+template<class ST> ostream & operator << (ostream & outs, const OrderedSet<ST> & L);
+
+template<class ST>
+class OrderedSet
+{
+ private:
+  struct LNode
+  {
+    LNode();
+    ST data;
+    LNode * next;
+    LNode * prev;
+  };
+
+ public:
+  OrderedSet();
+  OrderedSet(const OrderedSet & other);
+  ~OrderedSet();
+  OrderedSet & operator = (const OrderedSet & other);
+  bool operator == (const OrderedSet & other);
+  ST & operator [] (const int & index) const;
+  int Size() const;
+  friend ostream & operator << <> (ostream & outs, const OrderedSet<ST> & L);
+  void Forward(void function(const ST & param));
+  void Backward(void function(const ST & param));
+  void Clear();
+  bool IsEmpty() const;
+  bool IsIn (const ST & value) const;
+  bool Insert(const ST & value);
+  bool Delete(const ST & value);
+  OrderedSet operator + (const OrderedSet & other);
+  OrderedSet operator * (const OrderedSet & other);
+
+  class Iterator
+  {
+   public:
+    Iterator();
+    Iterator(LNode * NP);
+    //const ST operator * () const;
+    ST & operator * () const;
+    Iterator operator ++ ();
+    Iterator operator ++ (int);
+    Iterator operator -- ();
+    Iterator operator -- (int);
+    bool operator == (const Iterator & other) const;
+    bool operator != (const Iterator & other) const;
+    
+   private:
+    LNode * current;
+  };
+  Iterator begin() const;
+  Iterator rbegin() const;
+  Iterator end() const;
+  Iterator rend() const;
+
+ private:
+  LNode * first;
+  LNode * last;
+  int size;
+
+  bool InsertFirst(const ST & value);
+  bool InsertLast(const ST & value);
+  bool DeleteFirst();
+  bool DeleteLast();
+
+};
+
+template<class ST>
+OrderedSet<ST>::LNode::LNode()
+{
+  //data = 0;
+  next = NULL;
+  prev = NULL;
+}
+
+template<class ST>
+OrderedSet<ST>::OrderedSet()
+{
+  first = NULL;
+  last = NULL;
+  size = 0;
+}
+
+template<class ST>
+OrderedSet<ST>::OrderedSet (const OrderedSet & other)
+{
+  first = NULL;
+  size = 0;
+  for (LNode * n = other.first; n != NULL; n = n->next)
+    InsertLast (n->data);
+}
+
+template<class ST>
+OrderedSet<ST>::~OrderedSet ()
+{
+  while (first!=NULL)
+    DeleteFirst();
+}
+
+template<class ST>
+OrderedSet<ST> & OrderedSet<ST>::operator = (const OrderedSet & other)
+{
+  if (this == &other)
+    return * this;
+  while (first)
+    DeleteFirst();
+  for (LNode * n = other.first; n != NULL; n = n->next)
+    InsertLast (n->data);
+  return * this;
+}
+
+template<class ST>
+bool OrderedSet<ST>::operator == (const OrderedSet & other)
+{
+  if (size != other.size)
+    return false;
+  LNode * n = first;
+  LNode * m = other.first;
+  while (n != NULL)
+    {
+      if (n->data != m->data)
+	return false;
+      n = n->next;
+      m = m->next;
+    }
+  return true;
+}
+
+template<class ST>
+ST & OrderedSet<ST>::operator [] (const int & index) const
+{
+  typename OrderedSet<ST>::LNode * n = first;
+  if(index < size && index > 0)
+    for (int i = 0; i < index; i++)
+      n = n->next;
+  return n->data;
+}
+
+template<class ST>
+int OrderedSet<ST>::Size () const
+{
+  return size;
+}
+
+template<class ST>
+ostream & operator << (ostream & outs, const OrderedSet<ST> & L)
+{
+  if (L.first == NULL)
+    return outs;
+  outs << L.first->data;
+  for (typename OrderedSet<ST>::LNode * n = L.first->next; n != NULL; n = n->next)
+    outs << ' ' << n->data;
+  return outs;
+}
+
+template<class ST>
+bool OrderedSet<ST>::InsertFirst(const ST & value)
+{
+  LNode * np = new LNode;
+  if(np == NULL)
+    return false;
+  np->data = value;
+  if(size == 0)
+  {
+    first = np;
+    last = np;
+  }
+  else
+  {    
+    first->prev = np;
+    np->next = first;
+    first = np;
+  }
+  size++;
+  return true;
+}
+
+template<class ST>
+bool OrderedSet<ST>::InsertLast(const ST & value)
+{
+  if(size == 0)
+    return InsertFirst(value);
+  LNode * np = new LNode;
+  if(np == NULL)
+    return false;
+  np->data = value;
+  last->next = np;
+  np->prev = last;
+  last = np;
+  size++;
+  return true;
+}
+
+template<class ST>
+bool OrderedSet<ST>::DeleteFirst()
+{
+  if (first == NULL)
+    return false;
+  LNode * np = new LNode;
+  np = first;
+  if (size == 1)
+  {
+    np = first;
+    delete np;
+    first = NULL;
+    last = NULL;
+  }
+  else
+  {
+    first = first->next;
+    np = first->prev;
+    delete np;
+    first->prev = NULL;
+  }
+  size--;
+  return true;
+}
+
+template<class ST>
+bool OrderedSet<ST>::DeleteLast()
+{
+  if (first == NULL)
+    return false;
+  if (size == 1)
+    return DeleteFirst();
+  LNode * np = new LNode;
+  last = last->prev;
+  np = last->next;
+  delete np;
+  last->next = NULL;
+  size--;
+  return true;
+}
+
+template<class ST>
+void OrderedSet<ST>::Forward(void function(const ST & param))
+{
+  for(LNode * n = first; n; n = n->next)
+    function(n->data);
+}
+
+template<class ST>
+void OrderedSet<ST>::Backward(void function(const ST & param))
+{
+  for(LNode * n = last; n; n = n->prev)
+    function (n->data);
+}
+
+template<class ST>
+void Clear()
+{
+  while(first != NULL)
+    DeleteFirst();
+}
+
+template<class ST>
+bool IsEmpty() const
+{
+  if(first == NULL)
+    return false;
+  return true;
+}
+
+template<class ST>
+bool IsIn(const ST & value) const
+{
+  for(OrderedSet<ST>::Iterator itr == begin(); 
+
+template <class ST>
+OrderedSet<ST>::Iterator::Iterator ()
+{
+        current = NULL;
+}
+template <class ST>
+OrderedSet<ST>::Iterator::Iterator (LNode * NP)
+{
+        current = NP;
+}
+/*
+template <class ST>
+const ST OrderedSet<ST>::Iterator::operator * () const
+{
+        return current->data;
+}
+*/
+template <class ST>
+ST & OrderedSet<ST>::Iterator::operator * () const
+{
+	return current->data;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::Iterator::operator ++ ()
+{
+        current = current->next;
+        return *this;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::Iterator::operator ++ (int)
+{
+        Iterator temp = *this;
+        current = current->next;
+        return temp;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::Iterator::operator -- ()
+{
+        current = current->prev;
+        return *this;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::Iterator::operator -- (int)
+{
+        Iterator temp = *this;
+        current = current->prev;
+        return temp;
+}
+template <class ST>
+bool OrderedSet<ST>::Iterator::operator == (const Iterator & other) const
+{
+        return (current == other.current);
+}
+template <class ST>
+bool OrderedSet<ST>::Iterator::operator != (const Iterator & other) const
+{
+        return (current != other.current);
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::begin () const
+{
+        Iterator temp (first);
+        return temp;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::rbegin () const
+{
+        Iterator temp (last);
+        return temp;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::end () const
+{
+        Iterator temp;
+        return temp;
+}
+template <class ST>
+typename OrderedSet<ST>::Iterator OrderedSet<ST>::rend () const
+{
+        Iterator temp;
+        return temp;
+}
+
+#endif

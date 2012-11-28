@@ -1,0 +1,13 @@
+Eric Brewer
+2/25/09
+CS215
+Lab5
+
+  The executable lab5a outputs totals that are a considerable
+amount less than the outputs from lab5b. This is because a MAX
+value was used in lab5a - it was set to 100. The array could only
+hold 100 elements. The words read into lab5b are stored in a
+vector. The vector doesn't have a defined maxmimum number of elements.
+The push_back function continues to add space to the vector. It can 
+hold a very large number of elements, but I couldn't tell you exactly
+how many.

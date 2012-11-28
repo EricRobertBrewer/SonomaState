@@ -1,0 +1,49 @@
+
+
+ 2/17/2005: Fall Schedule Planning
+ We are currently creating a class Schedule for the Fall 2005 semester. Please complete and submit a
+ Course Selection Survey Form and return it to Gayle or a faculty member by Friday, Februrary 25 at
+ noon. The Fall 2005 schedule, as proposed so far, can be found here. 
+
+ 1/18/2005: An internship is available at Cisco Systems' Optical Networking Group in Petaluma. This position
+ is in the test automation department where the person would be developing and maintaining scripts and
+ libraries related to testing optical networking equipment. 
+
+ Useful knowledge and skills:
+ * Unix
+ * Scripting languages (Tcl, Perl)
+ * Networking
+ * Fault analysis
+
+ This is a good opportunity for a full-time student to gain experience in the network equipment and
+ telecommunications industry. Interested candidates may contact Scott Walls at swalls@cisco.com. 
+
+ 10/20/2004: Part-time job opportunities working for cabling contractor. Pay is $11 an hour for terminating
+ cables. Work weekends, weeknights, weekdays. Contact SSU CS Alumnus Nic Werner, Network Analyst,
+ IT/NTS Sonoma State University at nic.werner @ sonoma.edu or 707-664-2798. 
+
+ 10/18/2004: Adobe has employment opportunities for new graduates and interns in San Jose and Seattle.
+ Additional information can be found here 
+
+ 9/20/2004: Internship Opportunities: 
+
+
+  Digital Foundry in Tiburon is seeking to fill internships in internal tool
+  development and other customer-driven projects. Interns with a strong
+  desire to learn and to get things done are encouraged to apply. Interns
+  will work with a variety of tools and languages including C#, Javascript,
+  Html, Xsl/Xml, Sql, and Java. Contact SSU CS alumn David McGivney at
+  David@digitalfoundry.com for more information.
+
+
+
+
+  11/23/03:
+  The CS Department has tentatively decided to change the rotation schedule fo
+  course in the major. The following plan would begin in Fall, 2004.
+
+  Fall and Spring: CS 110, 115, 215, 250, 251, 315
+  Fall only: CS 351, 450, 454, 460
+  Spring only: CS 355, 370, 415, 451
+  Several electives would be offered each semester.
+

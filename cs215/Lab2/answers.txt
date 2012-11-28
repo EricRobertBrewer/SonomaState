@@ -1,0 +1,7 @@
+a.) The find function will find the least common denominator of the two passed integers.
+
+b.) Once the LCD is found, it divides the original two passed integers by said LCD.
+    ie. 15 9 returns 3 and both integers change to 5 and 3 resp.
+
+c.) Any application where you might need evenly divided parts distributed over multiple
+    groups.
