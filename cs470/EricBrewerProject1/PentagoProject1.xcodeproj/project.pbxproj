@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC3991114E5E1550004AC21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3991014E5E1550004AC21 /* UIKit.framework */; };
+		3FC3991314E5E1550004AC21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3991214E5E1550004AC21 /* Foundation.framework */; };
+		3FC3991514E5E1550004AC21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3991414E5E1550004AC21 /* CoreGraphics.framework */; };
+		3FC3991B14E5E1550004AC21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3991914E5E1550004AC21 /* InfoPlist.strings */; };
+		3FC3991D14E5E1550004AC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3991C14E5E1550004AC21 /* main.m */; };
+		3FC3992114E5E1550004AC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3992014E5E1550004AC21 /* AppDelegate.m */; };
+		3FC3992914E5E1550004AC21 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3992814E5E1550004AC21 /* SenTestingKit.framework */; };
+		3FC3992A14E5E1550004AC21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3991014E5E1550004AC21 /* UIKit.framework */; };
+		3FC3992B14E5E1550004AC21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3991214E5E1550004AC21 /* Foundation.framework */; };
+		3FC3993314E5E1550004AC21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3993114E5E1550004AC21 /* InfoPlist.strings */; };
+		3FC3993614E5E1550004AC21 /* PentagoProject1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3993514E5E1550004AC21 /* PentagoProject1Tests.m */; };
+		3FC3994114E5E1A60004AC21 /* PentagoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3994014E5E1A60004AC21 /* PentagoGame.m */; };
+		3FC3994914E5E6CE0004AC21 /* PentagoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3994814E5E6CE0004AC21 /* PentagoRootViewController.m */; };
+		3FC3994E14E5F78F0004AC21 /* PentagoBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3994D14E5F78E0004AC21 /* PentagoBoardView.m */; };
+		3FC3995014E5F9340004AC21 /* blueMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3994F14E5F9340004AC21 /* blueMarble.png */; };
+		3FC3995914E5F9490004AC21 /* grayMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995114E5F9490004AC21 /* grayMarble.png */; };
+		3FC3995A14E5F9490004AC21 /* greenMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995214E5F9490004AC21 /* greenMarble.png */; };
+		3FC3995B14E5F9490004AC21 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995314E5F9490004AC21 /* grid.png */; };
+		3FC3995C14E5F9490004AC21 /* pinkMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995414E5F9490004AC21 /* pinkMarble.png */; };
+		3FC3995D14E5F9490004AC21 /* purpleMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995514E5F9490004AC21 /* purpleMarble.png */; };
+		3FC3995E14E5F9490004AC21 /* redMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995614E5F9490004AC21 /* redMarble.png */; };
+		3FC3995F14E5F9490004AC21 /* tealMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995714E5F9490004AC21 /* tealMarble.png */; };
+		3FC3996014E5F9490004AC21 /* yellowMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3995814E5F9490004AC21 /* yellowMarble.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FC3992C14E5E1550004AC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC3990314E5E1540004AC21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC3990B14E5E1550004AC21;
+			remoteInfo = PentagoProject1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FC3990C14E5E1550004AC21 /* PentagoProject1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PentagoProject1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC3991014E5E1550004AC21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3FC3991214E5E1550004AC21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FC3991414E5E1550004AC21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3FC3991814E5E1550004AC21 /* PentagoProject1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PentagoProject1-Info.plist"; sourceTree = "<group>"; };
+		3FC3991A14E5E1550004AC21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FC3991C14E5E1550004AC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FC3991E14E5E1550004AC21 /* PentagoProject1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PentagoProject1-Prefix.pch"; sourceTree = "<group>"; };
+		3FC3991F14E5E1550004AC21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FC3992014E5E1550004AC21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3FC3992714E5E1550004AC21 /* PentagoProject1Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PentagoProject1Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC3992814E5E1550004AC21 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3FC3993014E5E1550004AC21 /* PentagoProject1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PentagoProject1Tests-Info.plist"; sourceTree = "<group>"; };
+		3FC3993214E5E1550004AC21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FC3993414E5E1550004AC21 /* PentagoProject1Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PentagoProject1Tests.h; sourceTree = "<group>"; };
+		3FC3993514E5E1550004AC21 /* PentagoProject1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PentagoProject1Tests.m; sourceTree = "<group>"; };
+		3FC3993F14E5E1A60004AC21 /* PentagoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PentagoGame.h; sourceTree = "<group>"; };
+		3FC3994014E5E1A60004AC21 /* PentagoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PentagoGame.m; sourceTree = "<group>"; };
+		3FC3994714E5E6CE0004AC21 /* PentagoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PentagoRootViewController.h; sourceTree = "<group>"; };
+		3FC3994814E5E6CE0004AC21 /* PentagoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PentagoRootViewController.m; sourceTree = "<group>"; };
+		3FC3994C14E5F78E0004AC21 /* PentagoBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PentagoBoardView.h; sourceTree = "<group>"; };
+		3FC3994D14E5F78E0004AC21 /* PentagoBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PentagoBoardView.m; sourceTree = "<group>"; };
+		3FC3994F14E5F9340004AC21 /* blueMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueMarble.png; sourceTree = "<group>"; };
+		3FC3995114E5F9490004AC21 /* grayMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayMarble.png; sourceTree = "<group>"; };
+		3FC3995214E5F9490004AC21 /* greenMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenMarble.png; sourceTree = "<group>"; };
+		3FC3995314E5F9490004AC21 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		3FC3995414E5F9490004AC21 /* pinkMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkMarble.png; sourceTree = "<group>"; };
+		3FC3995514E5F9490004AC21 /* purpleMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleMarble.png; sourceTree = "<group>"; };
+		3FC3995614E5F9490004AC21 /* redMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMarble.png; sourceTree = "<group>"; };
+		3FC3995714E5F9490004AC21 /* tealMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tealMarble.png; sourceTree = "<group>"; };
+		3FC3995814E5F9490004AC21 /* yellowMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowMarble.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC3990914E5E1550004AC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3991114E5E1550004AC21 /* UIKit.framework in Frameworks */,
+				3FC3991314E5E1550004AC21 /* Foundation.framework in Frameworks */,
+				3FC3991514E5E1550004AC21 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC3992314E5E1550004AC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3992914E5E1550004AC21 /* SenTestingKit.framework in Frameworks */,
+				3FC3992A14E5E1550004AC21 /* UIKit.framework in Frameworks */,
+				3FC3992B14E5E1550004AC21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC3990114E5E1540004AC21 = {
+			isa = PBXGroup;
+			children = (
+				3FC3991614E5E1550004AC21 /* PentagoProject1 */,
+				3FC3992E14E5E1550004AC21 /* PentagoProject1Tests */,
+				3FC3990F14E5E1550004AC21 /* Frameworks */,
+				3FC3990D14E5E1550004AC21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC3990D14E5E1550004AC21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3990C14E5E1550004AC21 /* PentagoProject1.app */,
+				3FC3992714E5E1550004AC21 /* PentagoProject1Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC3990F14E5E1550004AC21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3991014E5E1550004AC21 /* UIKit.framework */,
+				3FC3991214E5E1550004AC21 /* Foundation.framework */,
+				3FC3991414E5E1550004AC21 /* CoreGraphics.framework */,
+				3FC3992814E5E1550004AC21 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FC3991614E5E1550004AC21 /* PentagoProject1 */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3991F14E5E1550004AC21 /* AppDelegate.h */,
+				3FC3992014E5E1550004AC21 /* AppDelegate.m */,
+				3FC3993F14E5E1A60004AC21 /* PentagoGame.h */,
+				3FC3994014E5E1A60004AC21 /* PentagoGame.m */,
+				3FC3995314E5F9490004AC21 /* grid.png */,
+				3FC3994F14E5F9340004AC21 /* blueMarble.png */,
+				3FC3995114E5F9490004AC21 /* grayMarble.png */,
+				3FC3995214E5F9490004AC21 /* greenMarble.png */,
+				3FC3995414E5F9490004AC21 /* pinkMarble.png */,
+				3FC3995514E5F9490004AC21 /* purpleMarble.png */,
+				3FC3995614E5F9490004AC21 /* redMarble.png */,
+				3FC3995714E5F9490004AC21 /* tealMarble.png */,
+				3FC3995814E5F9490004AC21 /* yellowMarble.png */,
+				3FC3994C14E5F78E0004AC21 /* PentagoBoardView.h */,
+				3FC3994D14E5F78E0004AC21 /* PentagoBoardView.m */,
+				3FC3994714E5E6CE0004AC21 /* PentagoRootViewController.h */,
+				3FC3994814E5E6CE0004AC21 /* PentagoRootViewController.m */,
+				3FC3991714E5E1550004AC21 /* Supporting Files */,
+			);
+			path = PentagoProject1;
+			sourceTree = "<group>";
+		};
+		3FC3991714E5E1550004AC21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3991814E5E1550004AC21 /* PentagoProject1-Info.plist */,
+				3FC3991914E5E1550004AC21 /* InfoPlist.strings */,
+				3FC3991C14E5E1550004AC21 /* main.m */,
+				3FC3991E14E5E1550004AC21 /* PentagoProject1-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FC3992E14E5E1550004AC21 /* PentagoProject1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3993414E5E1550004AC21 /* PentagoProject1Tests.h */,
+				3FC3993514E5E1550004AC21 /* PentagoProject1Tests.m */,
+				3FC3992F14E5E1550004AC21 /* Supporting Files */,
+			);
+			path = PentagoProject1Tests;
+			sourceTree = "<group>";
+		};
+		3FC3992F14E5E1550004AC21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3993014E5E1550004AC21 /* PentagoProject1Tests-Info.plist */,
+				3FC3993114E5E1550004AC21 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC3990B14E5E1550004AC21 /* PentagoProject1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC3993914E5E1550004AC21 /* Build configuration list for PBXNativeTarget "PentagoProject1" */;
+			buildPhases = (
+				3FC3990814E5E1550004AC21 /* Sources */,
+				3FC3990914E5E1550004AC21 /* Frameworks */,
+				3FC3990A14E5E1550004AC21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PentagoProject1;
+			productName = PentagoProject1;
+			productReference = 3FC3990C14E5E1550004AC21 /* PentagoProject1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FC3992614E5E1550004AC21 /* PentagoProject1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC3993C14E5E1550004AC21 /* Build configuration list for PBXNativeTarget "PentagoProject1Tests" */;
+			buildPhases = (
+				3FC3992214E5E1550004AC21 /* Sources */,
+				3FC3992314E5E1550004AC21 /* Frameworks */,
+				3FC3992414E5E1550004AC21 /* Resources */,
+				3FC3992514E5E1550004AC21 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC3992D14E5E1550004AC21 /* PBXTargetDependency */,
+			);
+			name = PentagoProject1Tests;
+			productName = PentagoProject1Tests;
+			productReference = 3FC3992714E5E1550004AC21 /* PentagoProject1Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC3990314E5E1540004AC21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3FC3990614E5E1540004AC21 /* Build configuration list for PBXProject "PentagoProject1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FC3990114E5E1540004AC21;
+			productRefGroup = 3FC3990D14E5E1550004AC21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC3990B14E5E1550004AC21 /* PentagoProject1 */,
+				3FC3992614E5E1550004AC21 /* PentagoProject1Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC3990A14E5E1550004AC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3991B14E5E1550004AC21 /* InfoPlist.strings in Resources */,
+				3FC3995014E5F9340004AC21 /* blueMarble.png in Resources */,
+				3FC3995914E5F9490004AC21 /* grayMarble.png in Resources */,
+				3FC3995A14E5F9490004AC21 /* greenMarble.png in Resources */,
+				3FC3995B14E5F9490004AC21 /* grid.png in Resources */,
+				3FC3995C14E5F9490004AC21 /* pinkMarble.png in Resources */,
+				3FC3995D14E5F9490004AC21 /* purpleMarble.png in Resources */,
+				3FC3995E14E5F9490004AC21 /* redMarble.png in Resources */,
+				3FC3995F14E5F9490004AC21 /* tealMarble.png in Resources */,
+				3FC3996014E5F9490004AC21 /* yellowMarble.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC3992414E5E1550004AC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3993314E5E1550004AC21 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FC3992514E5E1550004AC21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC3990814E5E1550004AC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3991D14E5E1550004AC21 /* main.m in Sources */,
+				3FC3992114E5E1550004AC21 /* AppDelegate.m in Sources */,
+				3FC3994114E5E1A60004AC21 /* PentagoGame.m in Sources */,
+				3FC3994914E5E6CE0004AC21 /* PentagoRootViewController.m in Sources */,
+				3FC3994E14E5F78F0004AC21 /* PentagoBoardView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC3992214E5E1550004AC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3993614E5E1550004AC21 /* PentagoProject1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FC3992D14E5E1550004AC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC3990B14E5E1550004AC21 /* PentagoProject1 */;
+			targetProxy = 3FC3992C14E5E1550004AC21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FC3991914E5E1550004AC21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC3991A14E5E1550004AC21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FC3993114E5E1550004AC21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC3993214E5E1550004AC21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FC3993714E5E1550004AC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FC3993814E5E1550004AC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FC3993A14E5E1550004AC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PentagoProject1/PentagoProject1-Prefix.pch";
+				INFOPLIST_FILE = "PentagoProject1/PentagoProject1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FC3993B14E5E1550004AC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PentagoProject1/PentagoProject1-Prefix.pch";
+				INFOPLIST_FILE = "PentagoProject1/PentagoProject1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3FC3993D14E5E1550004AC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PentagoProject1.app/PentagoProject1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PentagoProject1/PentagoProject1-Prefix.pch";
+				INFOPLIST_FILE = "PentagoProject1Tests/PentagoProject1Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3FC3993E14E5E1550004AC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PentagoProject1.app/PentagoProject1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PentagoProject1/PentagoProject1-Prefix.pch";
+				INFOPLIST_FILE = "PentagoProject1Tests/PentagoProject1Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC3990614E5E1540004AC21 /* Build configuration list for PBXProject "PentagoProject1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC3993714E5E1550004AC21 /* Debug */,
+				3FC3993814E5E1550004AC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC3993914E5E1550004AC21 /* Build configuration list for PBXNativeTarget "PentagoProject1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC3993A14E5E1550004AC21 /* Debug */,
+				3FC3993B14E5E1550004AC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC3993C14E5E1550004AC21 /* Build configuration list for PBXNativeTarget "PentagoProject1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC3993D14E5E1550004AC21 /* Debug */,
+				3FC3993E14E5E1550004AC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FC3990314E5E1540004AC21 /* Project object */;
+}
