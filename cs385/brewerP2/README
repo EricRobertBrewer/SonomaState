@@ -1,0 +1,7 @@
+Eric Brewer
+4/28/10
+CS385 - Dr. Watts
+Project2 - Othello
+
+	 The AI searches first for corners, then edges, 
+then sadly, closest to the top left.
