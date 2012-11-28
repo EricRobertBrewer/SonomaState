@@ -1,0 +1,124 @@
+Eric Brewer
+11/3/08
+Rivoire - CS115
+Project3
+
+TEST CASES
+@@@@@@@@@@@@@@@@@@
+Menu prompt...
+1
+
+Enter two letter postal code...
+FL
+
+Florida has 27 electoral votes...
+Who won Florida?...
+1
+
+Menu prompt...
+2
+
+Obama - 27
+McCain - 0
+Undecided - 511
+
+
+#The basics of the program seem to work fine.
+  The undecided category should be fool-proof
+  because it's calculated from the candidates'
+  values. The scoreboard and menu display well, 
+  too.
+
+
+Menu prompt...
+1
+
+Enter two letter postal code...
+asdf
+
+State not found. Try again...
+
+
+#Check. I used a boolean instead of your -1
+  trick to check if the state was valid just 
+  because it seems a little clearer to me.
+  No segmentation fault like the guy who was
+  sitting next to me.
+
+Menu...
+1
+
+Enter two letter postal code...
+FL
+Who won Florida?...
+2
+
+Menu...
+2
+
+Obama - 0
+McCain - 27
+Undecided - 511
+
+
+#I think this function should be fool-proof
+  because it first sets both candidates' values
+  to 0 and adds the constant inside the
+  electoral votes array to the state winner's array. 
+  The undecided value is always recalculated.
+
+
+Menu...
+NJ
+
+Invalid input.
+
+
+#I tossed in error messages to catch invalid input
+  in the menu, the state search, and the "who won?"
+  I also have error messages to catch input that is 
+  valid, but happens to be out of the scope of the 
+  program. ie. 88 given to the menu input. I used the
+  same generic message regardless of the type of
+  invalidity.
+
+
+
+:::
+Obama has won!
+
+
+#If either candidate does have 270 votes, this is 
+  announced at the end of each loop iteration. 
+  The code is entirely straight forward. 
+  Similarly, if there is a tie, this is announced
+  in the same place. I'm sure these condition
+  statements can never overlap.
+
+
+
+Menu...
+1AZ
+
+Enter two letter postal code...
+Who won Arizona?...
+
+
+#This isn't too much of a problem; it's just
+  that the program first grabs the integer and
+  then takes the first recognizable string and
+  uses it for the state search (even though they're
+  not separated by white space). I wouldn't even
+  consider it a flaw even though one might consider
+  this invalid input for the menu screen.
+
+
+3
+Ok, try again later.
+
+Menu...
+3
+
+Goodbye.
+
+@@@@@@@@@@@@@@@@@@@

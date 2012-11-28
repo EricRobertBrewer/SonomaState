@@ -1,0 +1,67 @@
+inventory.txt:
+1.25
+pistacio raisin
+12
+------------------
+Menu prompt...
+i
+Current inventory: 12 scoops left.
+*** Sweet. I read the file cleanly.
+
+Menu prompt...
+b
+How many scoops?
+4
+Thank you that'll be $5.00.
+*** The (price * scoops) works and automatically converts to a float to two decimal places.
+
+Menu prompt...
+i
+Current inventory: 8 scoops left.
+*** Check, the scoops counter is keeping track of my scoops.
+
+Menu prompt...
+b
+How many scoops?
+98
+Error: I don't have enough scoops...
+*** Nice. It correctly checked and saw that I couldn't satisfy the hungry user.
+
+Menu prompt...
+b
+How many scoops?
+0
+Thank you, that'll be $0.00.
+*** This guy apparently changed his mind.
+
+Menu prompt...
+i
+Current inventory: 8 scoops left.
+*** Previously, I had trouble modifying the scoopsSold variable after I bought 0 scoops; that trouble has been cleared.
+
+Menu prompt...
+b
+How many scoops?
+i  <------------- Huge problem.
+Error: Invalid scoops request.
+Menu prompt...
+Current inventory: 8 scoops left.
+*** Here is my unfinished problem.
+    Apparently if BuyScoops is handed an invalid, non-integer
+    character, it prints an error message and continues to read
+    the scoops selection into the menu selection.
+    i.e. I typed "I am lactose intolerant" into the number-of-
+    scoops selection prompt. (I put a cin.clear() line to help 
+    combat this. I originally had an infinite loop.) This input 
+    gave me four lines of Error: Invalid menu selection since
+    it read four different strings in four separate loops.
+    What's worse is that if a valid MENU selection is put into
+    the SCOOPS selection prompt, such as 'r', the program returns
+    an invalid scoops message and follows with the program reading
+    the valid character and executing accordingly. I wasn't
+    sure how to prevent this from happening further than
+    cin.clear().
+-----------------------------------
+report.txt:
+Revenue: $5.00
+Scoops remaining: 8
