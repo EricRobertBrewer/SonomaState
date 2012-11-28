@@ -1,0 +1,68 @@
+/*
+part1.txt
+Eric Brewer
+11/21/10
+Watts
+CS460 - Programming Languages
+Prolog Tutorial Part 1 - 
+*/
+
+1. To what programming paradigm family does the language Prolog belong?
+  Prolog belongs to the logic programming paradigm family.
+
+2. For what types of applications is Prolog an appropriate programming language?
+  Theorem proving, artificial intelligence,
+
+3. Describe each of the following terms with respect to the Prolog programming language:
+a. world
+  The collection of all rules and facts within a program.
+b. fact
+  Looks like     cat(Tom).
+  Read as "Tom is a cat."
+c. rule
+  Looks like     Head :- Body.
+  Read as "Head is true is body is true."
+d. base
+  
+e. predicates
+  Equivalence of a C method.
+f. arguments
+  Same as C arguments. These are passed as parameters to predicates.
+g. arity
+  The mumber of arguments of a predicate.
+h. list
+  An ordered collection of items. Denoted by brackets [].
+i. instantiation
+  "Setting up" variables and constants for use of the internals.
+j. unification
+  The process of deducing a string of predicates for truth.
+
+4. Describe the Prolog syntax rules regarding each of the following:
+a. selecting variable names
+  Starting with an uppercase letter, consisting of letters, numbers, or the underscore.
+b. defining constant (literal) values
+  Must start with a lowercase letter.
+c. use of periods (.)
+  Statement terminator.
+d. use of semicolons (;)
+  
+e. use of commas (,)
+  Statement separator.
+f. formulation of facts
+  Such as     mother_child( trude, sally ).
+              father_child( tom, sally ).
+g. formulation of queries
+  Such as     ?- father_child( tom, henry ).
+              No.
+h. formulation of rules
+  Such as     parent_child( X, Y ) :- father_child( X, Y ).
+i. assignment statements
+  
+j. conditional expressions
+
+
+5. How do you create a Prolog source file? How do you document a Prolog source file? How
+     do you load the file using the Prolog interpreter?
+  Emacs or your favorite text editor - .pl extension.
+  
+  $ gprolog on cwolf, then > ['filename'].

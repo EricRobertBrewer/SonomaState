@@ -1,0 +1,11 @@
+--README
+--Eric Brewer
+--10/4/10
+--Watts
+--CS460 - Programming Languages
+--Scheme Tutorial
+
+  Includes all the functions of your Scheme Tutorial in separate files.
+  The file index.ss includes every load statement for these functions.
+  Type (load "index.ss") in the guile prompt to load each function into 
+your session.

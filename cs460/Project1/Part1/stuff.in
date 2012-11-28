@@ -1,0 +1,10 @@
+more = stuff( on( this( line ) ) );
+5 += 7;
+<==<=<=<<===<<<==<<=<=<=<=<=<<===<
+for( int i = 0; i < taillength(); i++ );
+char c = ( int * ) rising( 5, 4, 6, stringstream );
+char c = ( i < MAX ) ? 0 : 1;
+do( abunchmorestuff( a, b, c, d, e, lmnop ){
+    int one = 1;
+    int two = 2;
+} while( !true );

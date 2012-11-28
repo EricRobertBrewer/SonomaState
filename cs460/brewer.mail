@@ -1,0 +1,1 @@
+mail -s "$1" brewere@seawolf.sonoma.edu < $2 # Eric Brewer brewere
